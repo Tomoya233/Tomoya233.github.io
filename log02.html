@@ -1,0 +1,284 @@
+<!DOCTYPE html >  
+<html>  
+    <head>  
+        <title>JavaScript实验1</title>
+        <meta charset="UTF-8">   
+        <style>  
+        * {   
+          padding: 0px;   
+            margin: 0px;   
+        }   
+       
+        table {   
+            width: 981px;   
+            border: 0px;   
+            margin: 0px auto;   
+        }
+
+        tr {   
+            width: 100%;
+            background-color: rgba(199, 181, 186, 0.281);   
+        } 
+
+        td {   
+            padding: 0px;   
+        }
+
+        p.maintext{
+            text-indent: 2em;
+            margin: 15px;
+            line-height:2;
+            font-size:small;
+        }
+        h2{
+            
+            margin: 15px;
+            line-height:2;
+        }
+        h3{
+            
+            margin: 15px;
+            line-height:2;
+        }
+
+
+        hr.line_division{
+            
+            border: 0;
+            height:2px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+        }
+
+        b.info{
+            color: rgb(6, 78, 83);
+            font-size:x-large;
+            line-height:2;
+        }
+        #centertd {   
+            border-left-style: dotted;    
+            border-left-color: rgba(71, 164, 218, 0.671);     
+        }
+        
+        #nav a {   
+            text-decoration: none;   
+            color: rgba(0, 238, 255, 0.356);   
+        }
+           
+        #nav a:hover {   
+            color: rgb(214, 47, 47);   
+            border-bottom: 2px solid orchid;   
+        }   
+        a.hover img {   
+            width: 400;   
+            height: 400;   
+        } 
+          
+        </style>  
+    </head>  
+  
+    <body>  
+        <table>  
+            <tr height="227">  
+                <td background="./image/background2.jpg" valign="top">  
+                    <table>  
+                        <tr height="50">  
+                            <td id = "toppage">  
+                                <div id="nav">  
+                                     <a href="./index.html"><b>主页</b></a>  
+                                     <a href="./log01.html"><b>日志1</b></a>  
+                                <div>  
+                            </td>  
+                        </tr>  
+                    </table>  
+                </td>  
+            </tr>   
+            <tr height="620">  
+                <td>  
+                    <table>  
+                        <tr height="620">   
+                            <td valign="top" width="260">  
+                                <div style="line-height:150%;">
+                                    <b class="info" >
+                                        个人信息
+                                    </b>
+                                </div>
+                                <div style="line-height:150%;">  
+                                <p> 
+                                    <img src="./image/0.jpg" alt="头像" align="middle" width="100" height="100" style="margin-right:20px;"/><br />                                     
+                                    姓名：李霄翔<br />  
+                                    职业：学生<br />    
+                                    QQ：1606807395<br />  
+                                    Email：lxx610103@163.com<br />  
+                                    就读学校：<a href="https://www.tsinghua.edu.cn" target="_blank">清华大学</a><br /> 
+                                </p> 
+                                </div>
+                                <hr class="line_division" />  
+                                <div style="line-height:150%;">
+                                    <b class="info" >
+                                        BGM
+                                    </b>
+                                </div> 
+                                <div style="line-height:150%;">  
+                                    <center>
+                                            <audio src="./music/林ゆうき - ヒカリヘ (piano version).mp3" loop="loop" controls="controls" autoplay="autoplay">
+                                                    您的浏览器不支持 audio 标签。
+                                            </audio>
+                                    </center>  
+                                </div><hr class="line_division" />  
+                                <div style="line-height:150%;">
+                                    <b class="info" >
+                                        关于我
+                                    </b>
+                                </div> 
+                                <div style="line-height:150%; ">  
+                                    <p>
+                                        软件工程在读大学生，努力学习前端ing<br />   
+                                    </p>  
+                                </div>
+                                <hr class="line_division" />                        
+                            </td>   
+                            <td valign="top" id="centertd" width="720">
+                                <br />
+                                <div style="line-height:150%;">
+                                    <b class="info" >
+                                        初次接触Html与CSS
+                                    </b>
+                                </div> 
+                                <hr class="line_division" />
+                                <br />
+                                <h2>
+                                    第一题:ddl
+                                </h2>
+                                <h3>
+                                    题目
+                                </h3>
+                                <p class="maintext">
+                                    你需要实现⼀个函数 datetimeSort。这个函数接受两个参数，
+                                    第⼀个参数为形如(yyyy-MM-dd HH:mm:ss)的datetime格式字符串（表示DDL的时间戳），
+                                    第二个参数为datetime格式的字符串数组。 
+                                    datetimeSort 函数返回一个数组，
+                                    其中每个元素是⼀个对象，
+                                    拥有两个字段：datetime字段是从输入中获取的提交时间datetime字符串，
+                                    lateDays字段是超过DDL的天数。
+                                    要求你对第二个参数组中的所有datetime进⾏升序排序，<br />
+                                    你需要补充的函数如下
+                                    function datetimeSort(ddl, arr) {
+                                      // add your code here!
+                                    }
+                                    <br />
+                                </p>
+                                <h3>
+                                    问题解决
+                                </h3>
+                                <p class="maintext">
+                                        由于需要进行排序，处理过程与结果和初始顺序无关，
+                                        所以先利用sort()函数对arr数组进行排序，
+                                        之后利用js带有的Date()对象将数据输入转为Date()对象，
+                                        再使用带有的getTime()函数，得到其1970 年 1 月 1 日之间的毫秒数
+                                        比较其与ddl对应的毫秒数，从而判断是否超出ddl，
+                                        若超出ddl，则根据毫秒数差除以86400000（一天的毫秒数），
+                                        向下取整并加一得到lateDays，之后通过与从arr读取的datetime组合便可得到结果
+                                </p>
+                                <h2>
+                                    第二题:迭代器
+                                </h2>
+                                <h3>
+                                    题目
+                                </h3>
+                                <p class="maintext">
+                                    请实现一个 TreeIterator 类，完成多叉树的先序遍历，
+                                    对外提供迭代器接口。你的 TreeIterator 类的构造函数应接受一个参数，
+                                    为可能取值 null 的 JavaScript 对象，表示多叉树的根节点。
+                                    该值取 null 表示空树；非 null的每一个节点有 val 和 children 两个字段：
+                                    val 的取值是一个整数，
+                                    children是一个数组，其中依次包含了该节点的所有子节点。
+                                    叶子节点的 children 为 []。<br/>
+                                    你的 TreeIterator 类应当实现 has_next 和 next_value 方法来使得评测程序对你的 
+                                    TreeIterator 类能够正确调用。其中has_next 方法返回布尔类型，表示是否还有下一个元素，
+                                    相当于 C++ 风格迭代器中end()的比较；next_value 方法返回下一个元素，
+                                    相当于 C++ 风格迭代器中解引用、然后步进 1 个元素。
+                                    <br />
+                                </p>
+                                <h3>
+                                    问题解决
+                                </h3>
+                                <p class="maintext">
+                                        先序遍历在构造函数就可以实现，
+                                        只需在外部写一个递归函数用于读取节点并递归调用自己读取children数组中的元素
+                                        迭代器的实现可以利用一个数组和位置参数实现，
+                                        数组存储结点本身数据（不包含子节点），
+                                        pos指向要读取数组元素下标
+                                        这样便可以用pos和数组长度的比较实现has_next和next_value
+                                </p>
+                                <h2>
+                                    第三题:fmap
+                                </h2>
+                                <h3>
+                                    题目
+                                </h3>
+                                <p class="maintext">
+                                    请实现一个fmap函数，该函数能够递归地进行处理数组中的数组元素，
+                                    将传入的方法应用于其中的每一个原子元素上。
+                                    fmap函数应该接受两个参数：第一个参数是一个函数方法f，
+                                    f接受一个类型为int的参数并具有返回值；第二个参数是一个嵌套数组，
+                                    所有原子元素类型都是int。你的fmap函数应该能够正确返回同样结构的数组，
+                                    其中每一个原子元素都是原有原子元素传入f函数处理后的结果。
+                                    <br />
+                                </p>
+                                <h3>
+                                    问题解决
+                                </h3>
+                                <p class="maintext">
+                                    简单的递归函数构造，遍历数组，先判断数组中元素类型，
+                                    若为number进行f函数改变其值，否则其为数组
+                                    递归调用fmap即可，fmap的界为数组长度
+                                </p>
+                                <h2>
+                                    第四题:运算符定义
+                                </h2>
+                                <h3>
+                                    题目
+                                </h3>
+                                <p class="maintext">
+                                    请实现一个operatorDefinition函数，函数接受两个参数的输入，
+                                    第一个参数是字符串表示的运算符定义语句，
+                                    第二参数使用字符串表示的仅包含运算符&与括号的表达式，
+                                    要求返回按照运算符定义所计算的表达式的字符串结果。
+                                    运算符定义语句规则：
+                                    运算符记为&
+                                    运算符是一个长度为3的字符串，其定义可能会使用到且仅可能会用到：
+                                    ⼀个运算符：+、-、*、/ 四个运算符中的⼀个，它们全部是表示整数运算；
+                                    两个变量：x和y，x表示第一个参数，y表示第二个参数。<br/>
+                                    样例输入：<br/>
+                                    "y/x"<br/>
+                                    "4&((2&4)&43)"
+                                    <br />
+                                </p>
+                                <h3>
+                                    问题解决
+                                </h3>
+                                <p class="maintext">
+                                    问题分为两部分，第一部分为鉴别运算符，第二部分为带有括号的运算式的处理，第一部分很好处理，由于只有8种情况，只需要写一个函数一一字符串比较就行了，
+                                    函数返回一个数来表明进行哪种运算，并写一个专门的计算函数接受其值用于后续。
+                                    第二部分就相对复杂了，需要写两个栈结构用于括号匹配和数值储存计算，
+                                    第一个栈存储输入的数值数据，第二个栈读取符号，若为左括号，则入栈，若为运算符，也入栈，
+                                    若为右括号，执行循环，在符号栈出栈元素为左括号之前，不断弹出运算符，每弹出一个运算符，
+                                    数据栈弹出前两个元素，计算后将结果压栈，这样便可以处理括号种的计算。
+                                    在最后也需要运用这样的方法清空符号栈内剩余的不在括号里的运算符。，这样便可以完成计算。
+                                </p>
+                                <h2>
+                                    小结
+                                </h2>
+                                <p class="maintext">
+                                    这次实验让我熟悉了js的基本语法。前三道题都比较简单，第一题只需要利用Date()对象就可以很好解决，
+                                    第二、三题通过递归函数都可以较为轻松的解决。第四题因为需要使用栈结构，对于我这种js初学者还是比较麻烦的，
+                                    不过构造完栈结构就只需利用数据结构知识比较好的解决了。
+                                </p>
+                            </td>    
+                        </tr>  
+                    </table>
+                </td>  
+            </tr>  
+        </table>    
+    </body>  
+</html>
