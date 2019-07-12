@@ -1,7 +1,7 @@
 <!DOCTYPE html >  
 <html>  
     <head>  
-        <title>李霄翔的主页</title>
+        <title>基础实验4：NodeJS服务开发实践</title>
         <meta charset="UTF-8">   
         <style>  
         * {   
@@ -23,6 +23,24 @@
         td {   
             padding: 0px;   
         }
+
+        p.maintext{
+            text-indent: 2em;
+            margin: 15px;
+            line-height:2;
+            font-size:small;
+        }
+        h2{
+            
+            margin: 15px;
+            line-height:2;
+        }
+        h3{
+            
+            margin: 15px;
+            line-height:2;
+        }
+
 
         hr.line_division{
             
@@ -114,60 +132,33 @@
                                         关于我
                                     </b>
                                 </div> 
-                                <div style="line-height:150%; font-size:12px;">  
-                                        <p>
-                                            软件工程在读大学生，努力学习前端ing<br />   
-                                        </p> 
+                                <div style="line-height:150%; ">  
+                                    <p>
+                                        软件工程在读大学生，努力学习前端ing<br />   
+                                    </p>  
                                 </div>
                                 <hr class="line_division" />                        
                             </td>   
-                            <td valign="top" id="centertd" width="720">  
+                            <td valign="top" id="centertd" width="720">
                                 <br />
-                                <marquee>
-                                    <font color="blue">欢迎访问我的个人主页<br />
-                                    </font>
-                                </marquee>  
                                 <div style="line-height:150%;">
                                     <b class="info" >
-                                        图片
+                                        基础实验4：NodeJS服务开发实践 
                                     </b>
-                                </div>
-                                <div style="background-color:rgba(182, 249, 252, 0.116);">  
-                                    <hr class="line_division"/>  
-                                        <marquee scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();">    
-                                            <a href="./image/1.jpg" target="_blank"><img src="./image/1.jpg" alt="图像"width="177" height="100"></a>  
-                                            <a href="./image/2.jpg" target="_blank"><img src="./image/2.jpg" alt="图像"width="177" height="100"></a>  
-                                            <a href="./image/3.jpg" target="_blank"><img src="./image/3.jpg" alt="图像"width="177" height="100"></a>
-                                            <a href="./image/4.jpg" target="_blank"><img src="./image/4.jpg" alt="图像"width="177" height="100"></a>
-                                            <a href="./image/5.jpg" target="_blank"><img src="./image/5.jpg" alt="图像"width="177" height="100"></a>
-                                            <a href="./image/6.jpg" target="_blank"><img src="./image/6.jpg" alt="图像"width="177" height="100"></a> 
-                                        </marquee>  
-                                    <hr class="line_division"/>  
-                                </div>  
-                                <div style="line-height:150%;">
-                                    <b class="info" >
-                                        日志
-                                    </b>
-                                </div>
-                                <div style="line-height:250%;">  
-                                    <hr class="line_division"/>
-                                    <img src="./image/log1.jpg" width="30" height="30"/>
-                                    <a href="./log01.html" target="_blank" style="text-decoration: none;">
-                                        初次接触Html与CSS
-                                    </a><br/>
-                                    <hr class="line_division" width="80%"/>
-                                    <img src="./image/log2.jpg" width="30" height="30"/>
-                                    <a href="./log02.html" target="_blank" style="text-decoration: none;">
-                                        JavaScript实验1
-                                    </a><br/>
-                                    <hr class="line_division" width="80%"/>
-                                    <img src="./image/log2.jpg" width="30" height="30"/>
-                                    <a href="./log03.html" target="_blank" style="text-decoration: none;">
-                                        基础实验4：NodeJS服务开发实践
-                                    </a><br/>
-                                    <hr class="line_division" width="80%"/>
-                                    
-                                </div>  
+                                </div> 
+                                <hr class="line_division" />
+                                <br />
+                                <p class="maintext">
+                                    本次实验使用了express框架搭建服务器，为了获取各种请求的头字段使用了connect-multiparty部件来获取请求信息。
+                                    在一开始写的时候比较迷茫，后来在网上查阅了一些资料后逐渐就能上手了。在静态文件中使用的是express.static()方法，
+                                    将文件放于脚本同目录下即可。在处理post请求时，开始对send()函数不了解，不知其只能返回一次，花费了大量时间。
+                                    在调试时，发现postman确实好用，大大加速了调试进程。可惜的是本次大部分的开发都在本地进行，对远程服务器并没有太多操作，
+                                    希望之后能对其有更多了解。
+                                    <br />
+                                    主页地址：<br/>
+                                    152.136.204.109:8000
+                                </p>
+                                
                             </td>    
                         </tr>  
                     </table>
@@ -175,4 +166,4 @@
             </tr>  
         </table>    
     </body>  
-</html>  
+</html>
