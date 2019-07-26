@@ -1,7 +1,7 @@
 <!DOCTYPE html >  
 <html>  
     <head>  
-        <title>李霄翔的主页</title>
+        <title>综合实验：微信小游戏</title>
         <meta charset="UTF-8">   
         <style>  
         * {   
@@ -23,6 +23,24 @@
         td {   
             padding: 0px;   
         }
+
+        p.maintext{
+            text-indent: 2em;
+            margin: 15px;
+            line-height:2;
+            font-size:small;
+        }
+        h2{
+            
+            margin: 15px;
+            line-height:2;
+        }
+        h3{
+            
+            margin: 15px;
+            line-height:2;
+        }
+
 
         hr.line_division{
             
@@ -70,7 +88,7 @@
                                      <a href="./log01.html"><b>日志1</b></a>  
                                      <a href="./log02.html"><b>日志2</b></a>  
                                      <a href="./log03.html"><b>日志3</b></a>  
-                                     <a href="./log04.html"><b>日志4</b></a>  
+                                     <a href="./log04.html"><b>日志4</b></a>      
                                 <div>  
                             </td>  
                         </tr>  
@@ -115,65 +133,42 @@
                                         关于我
                                     </b>
                                 </div> 
-                                <div style="line-height:150%; font-size:12px;">  
-                                        <p>
-                                            软件工程在读大学生，努力学习前端ing<br />   
-                                        </p> 
+                                <div style="line-height:150%; ">  
+                                    <p>
+                                        软件工程在读大学生，努力学习前端ing<br />   
+                                    </p>  
                                 </div>
                                 <hr class="line_division" />                        
                             </td>   
-                            <td valign="top" id="centertd" width="720">  
+                            <td valign="top" id="centertd" width="720">
                                 <br />
-                                <marquee>
-                                    <font color="blue">欢迎访问我的个人主页<br />
-                                    </font>
-                                </marquee>  
                                 <div style="line-height:150%;">
                                     <b class="info" >
-                                        图片
+                                        综合实验：微信小游戏开发 
                                     </b>
-                                </div>
-                                <div style="background-color:rgba(182, 249, 252, 0.116);">  
-                                    <hr class="line_division"/>  
-                                        <marquee scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();">    
-                                            <a href="./image/1.jpg" target="_blank"><img src="./image/1.jpg" alt="图像"width="177" height="100"></a>  
-                                            <a href="./image/2.jpg" target="_blank"><img src="./image/2.jpg" alt="图像"width="177" height="100"></a>  
-                                            <a href="./image/3.jpg" target="_blank"><img src="./image/3.jpg" alt="图像"width="177" height="100"></a>
-                                            <a href="./image/4.jpg" target="_blank"><img src="./image/4.jpg" alt="图像"width="177" height="100"></a>
-                                            <a href="./image/5.jpg" target="_blank"><img src="./image/5.jpg" alt="图像"width="177" height="100"></a>
-                                            <a href="./image/6.jpg" target="_blank"><img src="./image/6.jpg" alt="图像"width="177" height="100"></a> 
-                                        </marquee>  
-                                    <hr class="line_division"/>  
-                                </div>  
-                                <div style="line-height:150%;">
-                                    <b class="info" >
-                                        日志
-                                    </b>
-                                </div>
-                                <div style="line-height:250%;">  
-                                    <hr class="line_division"/>
-                                    <img src="./image/log1.jpg" width="30" height="30"/>
-                                    <a href="./log01.html" target="_blank" style="text-decoration: none;">
-                                        初次接触Html与CSS
-                                    </a><br/>
-                                    <hr class="line_division" width="80%"/>
-                                    <img src="./image/log2.jpg" width="30" height="30"/>
-                                    <a href="./log02.html" target="_blank" style="text-decoration: none;">
-                                        JavaScript实验1
-                                    </a><br/>
-                                    <hr class="line_division" width="80%"/>
-                                    <img src="./image/log2.jpg" width="30" height="30"/>
-                                    <a href="./log03.html" target="_blank" style="text-decoration: none;">
-                                        基础实验4：NodeJS服务开发实践
-                                    </a><br/>
-                                    <hr class="line_division" width="80%"/>
-                                    <img src="./image/log2.jpg" width="30" height="30"/>
-                                    <a href="./log04.html" target="_blank" style="text-decoration: none;">
-                                        微信小游戏开发
-                                    </a><br/>
-                                    <hr class="line_division" width="80%"/>
-                                    
-                                </div>  
+                                </div> 
+                                <hr class="line_division" />
+                                <br />
+                                <p class="maintext">
+                                    游戏使用cocos creator制作，共分为三个场景，分别为Game，Menu，Over，Help，
+                                    其中Menu为初始场景，另有一全局结点Audio用作全局的音乐管理
+                                    （在编辑器里其因为与其他Canva重合所以报错，但无实质影响）。<br/>
+                                    Menu作为初始场景，其逻辑组件使用Menu.js,
+                                    包括一个开始游戏按钮和帮助界面按钮，分别跳转至游戏和帮助场景。<br/>
+                                    Game界面为游戏界面逻辑组件为Game.js，在开始游戏后运行，
+                                    当碰到炸弹游戏结束，跳转到Over界面。<br/>
+                                    Over界面为结束界面，逻辑组件为Over.js，界面显示玩家最终得分，
+                                    有一个重新开始按钮，用来重新加载游戏场景；还有一退出游戏按键，
+                                    用于退出游戏（发现因微信小游戏特性可能退出无效）。<br/>
+	                                Help界面为帮助界面，逻辑组件为Help.js，有按钮返回Menu界面。<br/>
+                                    Audio结点为全局的音乐控制，在加载时便申请为全局结点，其唯一控制按钮在左上，
+                                    控制是否开启声音。其逻辑组件为AudioManager.js，
+                                    其中有背景音乐以及玩家跳跃、冲刺、拾取金币、碰到炸弹的音效，
+                                    并放入了调用接口。所有场景使用声音都须调用该结点接口函数，
+                                    这样便于代码管理和声音控制统一。<br/>
+
+                                </p>
+                                
                             </td>    
                         </tr>  
                     </table>
@@ -181,4 +176,4 @@
             </tr>  
         </table>    
     </body>  
-</html>  
+</html>
